@@ -1,6 +1,21 @@
 version: '2'
 
 services:
+  reverse:
+    container_name: reverse
+    hostname: reverse
+    image: nginx
+    depends_on:
+      - storefront
+      - api
+      - dashboard
+    ports:
+      - 80:80
+    networks:
+      - saleor-backend-tier
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+    
   api:
     ports:
       - 8000:8000
@@ -24,6 +39,8 @@ services:
       - saleor-media:/app/media
     command: python manage.py runserver 0.0.0.0:8000
     env_file: common.env
+    networks:
+      - saleor-backend-tier
     environment:
       - JAEGER_AGENT_HOST=jaeger
       - STOREFRONT_URL=http://localhost:3000/
@@ -36,6 +53,8 @@ services:
     ports:
       - 3000:3000
     restart: unless-stopped
+    networks:
+      - saleor-backend-tier
     volumes:
       - ./saleor-storefront/:/app:cached
       - /app/node_modules/
