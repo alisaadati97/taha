@@ -1,0 +1,14 @@
+<svg width="220" height="80" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#460096" id="canvas_background" height="82" width="222" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text stroke="#000" transform="matrix(2.230686002479075,0,0,2.122327327279691,-784.7456693965414,-287.70762152518296) " xml:space="preserve" text-anchor="start" font-family="sans-serif" font-size="24" id="svg_1" y="162.7357" x="376.53027" stroke-width="0" fill="#00d6d6">رختان</text>
+ </g>
+</svg>
